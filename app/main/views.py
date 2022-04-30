@@ -4,6 +4,6 @@ from . import main
 
 @main.route('/')
 def index():
-  title = 'Welcome to Bashiri Tech News'
+  title = 'Bashiri | News on the Fly'
   
   return render_template('index.html', title=title)
