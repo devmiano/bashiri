@@ -7,9 +7,9 @@ def create_app(config_name):
   app = Flask(__name__, static_folder='assets')
   app.config.from_object(config_options[config_name])
   assets = Environment(app)
-  sass = Bundle('sass/global.scss', filters='pyscss, cssmin', output='styles/global.min.css')
+  sass = Bundle('sass/global.scss', 'sass/hero.scss', 'sass/navbar.scss', filters='pyscss', output='styles/global.css')
   assets.register('sass_all', sass)
-
+  sass.build()
   
   from .main import main as main_blueprint
   app.register_blueprint(main_blueprint)

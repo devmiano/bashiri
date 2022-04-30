@@ -1,0 +1,28 @@
+@import './abstracts/colors';
+
+#navbar {
+  width: 20%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 120;
+  height: 5rem;
+  position: sticky;
+  background: transparent;
+  padding-left: 1rem;
+  a {
+    padding: 1rem;
+    color: $accent;
+    font-size: 1.33rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $bg-dark;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
