@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% macro displayArticles(news_list) %} {% for article
+in news_list %}
+<a class="" href="{{article.url}}">
+  <img class="" src="{{article.urlToImage}}" alt="{{article.title}}" />
+  <p class="">{{article.source}}</p>
+  <h4 class="">{{article.title}}</h4>
+  <p class="">{{article.description}}</p>
+  <p class="">{{article.publishedAt}}</p>
+</a>
+
+{% endfor %} {% endmacro %}
