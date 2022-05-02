@@ -5,7 +5,7 @@
 </nav>
 <div id="hero">
   <div class="banner">
-    <h2>BBC News</h2>
+    <h2>{{title}}</h2>
     <p>
       Seamlessly get the latest news from the best source available on the web,
       straight to your device
@@ -14,7 +14,7 @@
 </div>
 <div id="sticky">
   <nav class="footer">
-    <a href="#">BBC</a>
+    <a href="/bbc-news">BBC</a>
     <a href="#">CNN</a>
     <a href="#">ABC</a>
     <a href="#">Washigton Post</a>
@@ -22,7 +22,14 @@
 </div>
 
 <div class="">
-  <div class="">{{macro.displayArticles(bbc)}}</div>
+  {% for item in items %}
+  <h4 class="">{{item.name}}</h4>
+  <p class="">{{item.description}}</p>
+  <p class="">{{item.category}}</p>
+  <a class="" href="{{item.url}}">Go to Website</a>
+
+  {% endfor %}
+  <div class="">{{macro.displayArticles(all)}}</div>
 </div>
 
 {% endblock %}

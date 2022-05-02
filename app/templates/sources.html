@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% import 'macros.html' as macro %} {% block content
-%}
+{% extends 'base.html' %} {% import 'source-macro.html' as macro %} {% block
+content %}
 <nav id="navbar">
   <a href="/">BASHIRI</a>
 </nav>
@@ -22,7 +22,7 @@
 </div>
 
 <div class="">
-  <div class="">{{macro.displayArticles(bbc)}}</div>
+  <div class="">{{macro.displaySources(all)}}</div>
 </div>
 
 {% endblock %}

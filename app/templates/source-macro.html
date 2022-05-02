@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% macro displaySources(sources_list) %} {% for source
+in sources_list %}
+<h4 class="">{{source.id}}</h4>
+<h4 class="">{{source.name}}</h4>
+<p class="">{{source.description}}</p>
+<p class="">{{source.category}}</p>
+<a class="" href="{{source.url}}">Go to Website</a>
+
+{% endfor %} {% endmacro %}
