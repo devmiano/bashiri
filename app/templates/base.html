@@ -23,9 +23,17 @@
       });
     </script>
 
-    <title>{{title}}</title>
+    {% if title %}
+    <title>Bashiri | {{title}}</title>
+    {% else %}
+    <title>Bashiri | Tech News on the Fly</title>
+    {% endif %}
   </head>
   <body>
+    <nav id="navbar">
+      <a href="/">Bashiri</a>
+    </nav>
+
     {% block content %} {% endblock %}
   </body>
 </html>

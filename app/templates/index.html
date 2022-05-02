@@ -1,26 +1,21 @@
 {% extends 'base.html' %} {% import 'macros.html' as macro %} {% block content
 %}
-<nav id="navbar">
-  <a href="/">BASHIRI</a>
-</nav>
 <div id="hero">
   <div class="banner">
-    <h2>News on the Fly</h2>
+    <h2>Tech News on the Fly</h2>
     <p>
-      Seamlessly get the latest news from the best source available on the web,
-      straight to your device
+      Seamlessly get the latest tech news from the best source available on the
+      web, straight to your device
     </p>
   </div>
 </div>
 <div id="sticky">
   <nav class="footer">
-    <a href="/bbc-news">BBC</a>
-    <a href="#">CNN</a>
-    <a href="#">ABC</a>
-    <a href="#">Washigton Post</a>
+    {% for source in sources %}
+    <a href="/news/{{source.id}}">{{source.name}}</a>
+    {% endfor %}
   </nav>
 </div>
-
 <div class="">
   <div class="">{{macro.displayArticles(headlines)}}</div>
 </div>

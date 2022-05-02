@@ -67,7 +67,6 @@ def get_sources():
 
 def get_source():
   get_source_url = techUrl.format(apiKey)
-  
   with urllib.request.urlopen(get_source_url) as url:
     get_source_data = url.read()
     source_response = json.loads(get_source_data)
