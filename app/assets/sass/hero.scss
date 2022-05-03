@@ -16,6 +16,7 @@
     padding: 1rem;
     cursor: pointer;
     text-decoration: none;
+    text-transform: uppercase;
   }
 
   #link.selected {
@@ -39,7 +40,7 @@
     padding: 2rem;
 
     h2 {
-      color: $accent;
+      color: $title;
       font-size: 2.33rem;
       font-weight: 700;
       letter-spacing: 0.05rem;

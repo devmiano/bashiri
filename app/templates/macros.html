@@ -1,11 +1,18 @@
 {% extends 'base.html' %} {% macro displayArticles(news_list) %} {% for article
 in news_list %}
-<a class="" href="{{article.url}}">
+<div id="article">
   <img class="" src="{{article.urlToImage}}" alt="{{article.title}}" />
-  <h4 class="">{{article.title}}</h4>
-  <p class="">{{article.description}}</p>
-  <p class="">{{article.publishedAt}}</p>
-</a>
+
+  <p class="date">{{article.publishedAt|truncate(10, False, '', 0) }}</p>
+  <div class="">
+    <h4 class="">{{article.title |truncate(64, False, '...', 0)}}</h4>
+    <p class="">{{article.description |truncate(96, False, '...', 0)}}</p>
+  </div>
+  <a href="{{article.url}}">
+    <p>view article</p>
+    <img src="../assets/icons/arrow.svg" alt=""
+  /></a>
+</div>
 
 {% endfor %} {% endmacro %} {% macro displaySources(sources_list) %} {% for
 source in sources_list %}
