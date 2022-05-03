@@ -7,7 +7,8 @@ def create_app(config_name):
   app = Flask(__name__, static_folder='assets')
   app.config.from_object(config_options[config_name])
   assets = Environment(app)
-  sass = Bundle('sass/global.scss', 'sass/hero.scss', 'sass/navbar.scss', filters='pyscss', output='styles/global.css')
+  assets.url = app.static_url_path
+  sass = Bundle('sass/global.scss', 'sass/main.scss', 'sass/hero.scss', 'sass/navbar.scss', filters='pyscss', depends='sass/base/*.scss', output='styles/global.css')
   assets.register('sass_all', sass)
   sass.build()
   

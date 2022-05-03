@@ -1,21 +1,24 @@
 {% extends 'base.html' %} {% import 'macros.html' as macro %} {% block content
 %}
-<div id="hero">
-  <div class="banner">
-    {% for source in sources %} {% if source.id == name %}
-    <h2>{{source.name}}</h2>
-    <p>{{source.description}}</p>
-    <a href="/news/{{source.url}}">Visit {{source.name}}</a>
-    {% endif %} {% endfor %}
+<div class="app">
+  <div id="hero">
+    <div class="banner">
+      {% for source in sources %} {% if source.id == name %}
+      <h2>{{source.name}}</h2>
+      <p>{{source.description}}</p>
+      <a href="{{source.url}}">Visit {{source.name}}</a>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+  <div id="sticky">
+    <nav class="footer">
+      {% for source in sources %}
+      <a id="link" href="/news/{{source.id}}">{{source.name}}</a>
+      {% endfor %}
+    </nav>
   </div>
 </div>
-<div id="sticky">
-  <nav class="footer">
-    {% for source in sources %}
-    <a href="/news/{{source.id}}">{{source.name}}</a>
-    {% endfor %}
-  </nav>
-</div>
+
 <div class="">
   <div class="">{{macro.displayArticles(news)}}</div>
 </div>

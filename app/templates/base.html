@@ -21,6 +21,10 @@
           }
         });
       });
+      $('#link').on('click', function () {
+        $('#link').removeClass('selected');
+        $(this).addClass('selected');
+      });
     </script>
 
     {% if title %}

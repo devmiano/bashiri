@@ -14,6 +14,7 @@ class ProdConfig(Config):
 
 class DevConfig(Config):
   DEBUG = True
+  ASSETS_DEBUG = True
   
 config_options = {
   'development': DevConfig,
