@@ -9,6 +9,7 @@ techUrl = None
 
 
 def configure_request(app):
+  '''function that configures the request object needed for running the application'''
   global apiKey, baseUrl, newsUrl, techUrl
   apiKey = app.config['NEWS_API_KEY']
   baseUrl = app.config['BASE_API_URL']
@@ -17,6 +18,7 @@ def configure_request(app):
   
 
 def process_results(news_list):
+  '''function that processes the results of news items from the api'''
   news_results = []
   for article in news_list:
     title = article.get('title')
@@ -33,6 +35,7 @@ def process_results(news_list):
 
 
 def process_sources(sources_list):
+  '''function that processes the results of sources items from the api'''
   sources_results = []
   for source in sources_list:
     id = source.get('id')
@@ -51,6 +54,7 @@ def process_sources(sources_list):
 
 
 def get_sources():
+  '''function that retrieves the data for a given news source from the api'''
   get_sources_url = techUrl.format(apiKey)
   
   with urllib.request.urlopen(get_sources_url) as url:
@@ -67,6 +71,7 @@ def get_sources():
 
 
 def get_source():
+  '''function that retrieves the data for a specific news source from the api'''
   get_source_url = techUrl.format(apiKey)
   with urllib.request.urlopen(get_source_url) as url:
     get_source_data = url.read()
@@ -87,6 +92,7 @@ def get_source():
 
 
 def get_headlines():
+  '''function that retrieves the headlines for a given news source from the api'''
   get_headlines_url = baseUrl.format(apiKey)
   
   with urllib.request.urlopen(get_headlines_url) as url:
@@ -103,6 +109,7 @@ def get_headlines():
 
 
 def get_news(sources):
+  '''function that retrieves the data for specific news source from the api'''
   get_news_url = newsUrl.format(sources, apiKey)
   
   with urllib.request.urlopen(get_news_url) as url:
