@@ -150,6 +150,17 @@
     justify-content: center;
     padding: 1rem; }
 
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/devmiano\/builds\/moringa\/bashiri\/app\/assets\/sass\/main\.scss}line{font-family:\0000389}}
+    #mainFooter {
+      width: 100%;
+      height: 5rem;
+      background-color: #011936; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/devmiano\/builds\/moringa\/bashiri\/app\/assets\/sass\/main\.scss}line{font-family:\0000392}}
+      #mainFooter p {
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/devmiano\/builds\/moringa\/bashiri\/app\/assets\/sass\/main\.scss}line{font-family:\000032}}
 #articles {
   display: flex;
@@ -229,6 +240,17 @@
   align-items: center;
   justify-content: center;
   padding: 1rem; }
+
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/devmiano\/builds\/moringa\/bashiri\/app\/assets\/sass\/main\.scss}line{font-family:\0000386}}
+  #mainFooter {
+    width: 100%;
+    height: 5rem;
+    background-color: #011936; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/devmiano\/builds\/moringa\/bashiri\/app\/assets\/sass\/main\.scss}line{font-family:\0000389}}
+    #mainFooter p {
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/devmiano\/builds\/moringa\/bashiri\/app\/assets\/sass\/hero\.scss}line{font-family:\0000331}}
 #hero {
