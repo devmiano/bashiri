@@ -4,7 +4,7 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 18px; }
+    font-size: 16px; }
 
     @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/devmiano\/builds\/moringa\/bashiri\/app\/assets\/sass\/base\/_reset\.scss}line{font-family:\0000323}}
     body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
